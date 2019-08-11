@@ -221,9 +221,16 @@ public class FrpcThreadManager implements Runnable {
         if (keys == null || keys.length < 1) {
           return;
         }
-        Section current = ini.add(keys[0]);
+        Section current = ini.get(keys[0]);
+        if (current == null) {
+          current = ini.add(keys[0]);
+        }
         for (int i = 1; i < keys.length - 1; i++) {
-          current = current.addChild(keys[i]);
+          Section child = current.getChild(keys[i]);
+          if (child == null) {
+            child = current.addChild(keys[i]);
+          }
+          current = child;
         }
         current.add(keys[keys.length - 1], v);
 
