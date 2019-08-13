@@ -85,5 +85,6 @@
   <modules>
     <module>frpc-core</module>
     <module>frpc_windows</module>
+    <module>frpc_linux</module>
   </modules>
 </project>

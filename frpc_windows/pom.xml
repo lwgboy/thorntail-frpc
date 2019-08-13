@@ -13,13 +13,9 @@
   <packaging>jar</packaging>
 
   <name>${project.groupId}:${project.artifactId}</name>
-  <description>frpc.</description>
+  <description>frpc windows.</description>
 
   <dependencies>
-    <dependency>
-      <groupId>net.java.dev.jna</groupId>
-      <artifactId>jna</artifactId>
-    </dependency>
     <dependency>
       <groupId>cn.thorntail.frpc</groupId>
       <artifactId>thorntail-frpc-core</artifactId>
